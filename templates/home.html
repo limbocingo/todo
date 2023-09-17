@@ -1,0 +1,31 @@
+<head>
+    <link rel="stylesheet" type="text/css" href="home.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans:wght@300;400&family=Roboto:wght@300&family=Space+Mono&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <h1>PyPulse To Do</h1>
+
+    <form method="post">
+        <input type="text" id="title" placeholder="Task" name="task" required  minlength=3 maxlength=20 >
+        <textarea placeholder="Description" name="description" required minlength=15></textarea>
+
+        <button type="submit" name="create" id="create">Create Task</button> 
+    </form>
+
+    <h1>
+        Tasks
+    </h1>
+
+    <form id="tasks" method="post">
+        {% for i in data %}
+            <button id="task" name="{{ i['id'] }}">
+                <p>{{ i['name'] }}</p>
+            </button>
+        {% endfor %}
+    </form>
+        
+</body>
