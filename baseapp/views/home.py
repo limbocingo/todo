@@ -23,8 +23,6 @@ def home(request: dict):
         body = request.get("body")
         body_keys = list(body.keys())
 
-        print(body)
-
         if 'create' in body_keys:
             with open(data_file_path, 'w') as fw:
                 print(data)
