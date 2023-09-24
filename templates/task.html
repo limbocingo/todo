@@ -1,9 +1,11 @@
 <head>
-    <link rel="stylesheet" type="text/css" href="task.css">
+    <link rel="stylesheet" type="text/css" href="/task.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans:wght@300;400&family=Roboto:wght@300&family=Space+Mono&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans:wght@300;400&family=Roboto:wght@300&family=Space+Mono&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
@@ -14,9 +16,16 @@
         <input type="text" id="title" value="{{ name }}" name="task" minlength=3 maxlength=20>
         <textarea name="description" minlength=15>{{ description }}</textarea>
 
-        <button type="submit" name="update" id="update">Update Task</button> 
-        <button type="submit" name="delete" id="delete">Delete Task</button> 
-        <a href="/">Go Back</a>
+        <button type="submit" name="update" id="update">
+            Update Task
+        </button>
+
+        <button type="button" id="delete">
+            <a href="/task/{{ id }}/delete">Delete Task</a>
+        </button>
+
     </form>
+
+    <a id="goback" href="/">Go Back</a>
 
 </body>
